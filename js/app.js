@@ -7,18 +7,17 @@ async function getData() {
     const url = `https://api.pray.zone/v2/times/today.json?city=amman`
     const response = await fetch(url);
     const allData = await response.json();
-    const todayDate = allData.results.datetime[0].date.gregorian
+    // const todayDate = allData.results.datetime[0].date.gregorian
     const prayerTimeObject = allData.results.datetime[0].times;
-    return todayDate, prayerTimeObject
+    return prayerTimeObject
 }
-
-function formatTime(time){
- const timeArr = time.split(":");
- let timeFormat;
- timeArr[0] < 12 ? timeFormat = `${time} AM` : 
-                   Number(timeArr[0]) - 12< 9 ?  timeFormat = `0${Number(timeArr[0]) - 12}:${timeArr[1]} PM` :
-                   timeFormat = `${Number(timeArr[0]) - 12}:${timeArr[1]} PM`;
- return timeFormat;
+function formatTime(time) {
+    const timeArr = time.split(":");
+    let timeFormat;
+    timeArr[0] < 12 ? timeFormat = `${time} AM` :
+        Number(timeArr[0]) - 12 < 9 ? timeFormat = `0${Number(timeArr[0]) - 12}:${timeArr[1]} PM` :
+            timeFormat = `${Number(timeArr[0]) - 12}:${timeArr[1]} PM`;
+    return timeFormat;
 }
 async function renderTable() {
     const data = await getData();
@@ -34,7 +33,7 @@ async function renderTable() {
         tr.appendChild(par);
 
         par.appendChild(image);
-        
+
         image.src = `../images/${key}.png`;
         image.style.width = "25px";
         image.style.height = "25px";
@@ -46,14 +45,4 @@ async function renderTable() {
     }
 }
 
-renderTable()
-
-// async function fetchData() {
-//     const res=await fetch ("https://api.coronavirus.data.gov.uk/v1/data");
-//     const record=await res.json();
-//     document.getElementById("date").innerHTML=record.data[0].date;
-//     document.getElementById("areaName").innerHTML=record.data[0].areaName;
-//     document.getElementById("latestBy").innerHTML=record.data[0].latestBy;
-//     document.getElementById("deathNew").innerHTML=record.data[0].deathNew;
-// }
-// fetchData();
+renderTable();
