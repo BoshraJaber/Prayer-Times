@@ -2,7 +2,8 @@
 This is a small project to create a Chrome extension that shows prayer times 
 
 ## Resources:
-* [Prayer Time API](https://prayertimes.date/api/docs/today)
+* [Prayer Time API](https://prayertimes.date/api/docs/today).
+* [Chrome Extensions](https://developer.chrome.com/docs/extensions/mv3/manifest/)
 
 ## Icons: [Flat Icons](https://www.flaticon.com/)
 * `<a href="https://www.flaticon.com/free-icons/dawn" title="dawn icons">Dawn icons created by Freepik - Flaticon</a>`

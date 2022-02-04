@@ -15,7 +15,7 @@ async function getData() {
 function formatTime(time){
  const timeArr = time.split(":");
  let timeFormat;
- timeArr[0] < 12 ? timeFormat = `${time} AM` : timeFormat = `${Number(timeArr[0]) - 12}:${timeArr[1]}  PM`;
+ timeArr[0] < 12 ? timeFormat = `${time}AM` : timeFormat = `${Number(timeArr[0]) - 12}:${timeArr[1]}PM`;
  return timeFormat;
 }
 async function renderTable() {
@@ -25,7 +25,7 @@ async function renderTable() {
         const tr = document.createElement('tr');
         tbody.appendChild(tr);
         const td = document.createElement('td');
-        const par = document.createElement('div');
+        const par = document.createElement('th');
         td.textContent = key;
         const image = document.createElement("img");
         tr.appendChild(td);

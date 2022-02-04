@@ -1,0 +1,11 @@
+{
+    "name": "Prayer Times",
+    "version": "1.0.0",
+    "description": "A Chrome Extension so you don't miss a prayer",
+    "manifest_version": 3,
+    "author": "Boshra Jaber",
+    "action":{
+        "default_popup": "index.html",
+        "default_title": "Prayer Times"
+    }
+}
