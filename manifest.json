@@ -4,8 +4,13 @@
     "description": "A Chrome Extension so you don't miss a prayer",
     "manifest_version": 3,
     "author": "Boshra Jaber",
-    "action":{
+    "action": {
         "default_popup": "index.html",
-        "default_title": "Prayer Times"
+        "default_title": "Prayer Times",
+        "default_icon": {
+            "16": "images/praying.png",
+            "24": "images/praying.png",
+            "32": "images/praying.png"
+        }
     }
 }
