@@ -5,4 +5,39 @@ thead{
 }
 tbody{
     font-family: 'Roboto Slab', serif;
+    
 }
+table{
+    padding: 0px;
+    margin: 0px;
+}
+footer{
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    padding-bottom: 10px;
+    color: white;
+    font-family: 'Roboto Slab', serif;
+    background-color: #212529;
+}
+
+a:link {
+    color: white;
+  }
+  a:visited {
+    color: white;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: white;
+  }
+  
+  /* selected link */
+  a:active {
+    color:white;
+  }
+
+  td{
+      white-space: nowrap;
+  }
