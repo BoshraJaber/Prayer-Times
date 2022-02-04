@@ -15,7 +15,9 @@ async function getData() {
 function formatTime(time){
  const timeArr = time.split(":");
  let timeFormat;
- timeArr[0] < 12 ? timeFormat = `${time} AM` : timeFormat = `${Number(timeArr[0]) - 12}:${timeArr[1]} PM`;
+ timeArr[0] < 12 ? timeFormat = `${time} AM` : 
+                   Number(timeArr[0]) - 12< 9 ?  timeFormat = `0${Number(timeArr[0]) - 12}:${timeArr[1]} PM` :
+                   timeFormat = `${Number(timeArr[0]) - 12}:${timeArr[1]} PM`;
  return timeFormat;
 }
 async function renderTable() {

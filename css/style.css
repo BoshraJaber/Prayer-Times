@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;900&display=swap');
-
+body{
+    text-align: center;
+}
 thead{
     font-family: 'Roboto Slab', serif;
 }
@@ -7,10 +9,7 @@ tbody{
     font-family: 'Roboto Slab', serif;
     
 }
-table{
-    padding: 0px;
-    margin: 0px;
-}
+
 footer{
     text-align: center;
     margin: 0px;
@@ -40,4 +39,19 @@ a:link {
 
   td{
       white-space: nowrap;
+  }
+  a:link {
+    text-decoration: none;
+  }
+  
+  a:visited {
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  a:active {
+    text-decoration: underline;
   }
